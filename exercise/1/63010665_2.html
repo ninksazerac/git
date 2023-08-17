@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 1-2</title>
+  </head>
+  <body>
+    <ul>
+      <fieldset>
+        <legend><i>Contact Information</i></legend>
+        <form>
+          <div>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" />
+          </div>
+          <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" />
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend><i>Competition Question</i></legend>
+        <form>
+          How tall is the Eiffel Tower in Paris, France?
+          <div>
+            <input type="radio" id="584ft" name="tall" value="584ft" />
+            <label for="584ft">584ft</label><br />
+          </div>
+          <div>
+            <input type="radio" id="784ft" name="tall" value="784ft" />
+            <label for="784ft">784ft</label><br />
+          </div>
+          <div>
+            <input type="radio" id="984ft" name="tall" value="984ft" />
+            <label for="984ft">984ft</label><br />
+          </div>
+          <div>
+            <input type="radio" id="1184ft" name="tall" value="1184ft" />
+            <label for="1184ft">1184ft</label><br />
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend><i>Tiebreaker Question</i></legend>
+        <form>
+          In 25 words or less, say why you would like to win $10,000:
+          <div>
+            <textarea
+              name="message"
+              style="width: 300px; height: 150px"
+            ></textarea>
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend><i>Enter competition</i></legend>
+        <form>
+          <button type="submit">Enter Competition</button>
+        </form>
+      </fieldset>
+    </ul>
+  </body>
+</html>

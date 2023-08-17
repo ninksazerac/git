@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </head>
+  <title>The 7 Best Romance Movies of All Time</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: fangsong;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .image-header-container {
+      position: relative;
+      margin: 0 0 30px 0;
+      box-shadow: 2px 2px 4px rgba(83, 82, 82, 0.5);
+    }
+    .image-header {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-size: 85px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - 50px);
+      object-fit: cover;
+    }
+    .card {
+      margin: 0 20px 40px 20px;
+      padding: 20px 20px 20px 0;
+      border: #fff;
+      /* background-color: aliceblue; */
+      background-color:rgba(206, 206, 203, 0.308);
+    }
+    .card-img {
+      flex: 1;
+      max-width: 100%;
+      height: 250px;
+    }
+
+    .card-title {
+      flex: 1;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 40px;
+      text-align:left;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .card-text {
+      padding: 0 20px 0 20px;
+      font-size: 20px;
+    }
+
+    .card:hover .card-title {
+      opacity: 1;
+    }
+
+    @media (max-width: 851px) {
+      .image-header {
+        font-size: 40px;
+      }
+      .card {
+        height: fit-content;
+        box-shadow: 2px 2px 4px rgba(83, 82, 82, 0.5);
+        /* background-color: blue; */
+      }
+      .card-title {
+        font-size: 30px;
+      }
+      .card-img {
+        display: flex;
+        width:max-content;
+        height: 250px;
+        object-fit: cover;
+        align-items: center;
+      }
+      .card-text {
+        font-size: 15px;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>Movie</b></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#movie1">Rank1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie2">Rank2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie3">Rank3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie4">Rank4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie5">Rank5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie6">Rank6</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie7">Rank7</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="image-header-container">
+      <header class="image-header">
+        <p><b>The 7 Best Romance Movies of All Time</b></p>
+      </header>
+      <img
+        src="https://cdn.pic.in.th/file/picinth/wallpaperflare.com_wallpaper9a411bc3b360458e.jpeg"
+        class="card-img-top"
+        alt="..."
+      />
+    </div>
+
+    <div class="card" id="movie1">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pic.in.th/file/picinth/Casablanca.webp"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">1. 'Casablanca' (1942)</h5>
+            <p class="card-text">
+              If you choose to never watch this movie, you will regret it. Maybe
+              not today. Maybe not tomorrow, but soon and for the rest of your
+              life. Humphrey Bogart said these words (or at least very similar
+              ones) to Ingrid Bergman in the legendary film, Casablanca, and
+              those words alone, along with the amazing entirety of the film,
+              continue to influence and inspire both filmmakers and fans today.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="movie2">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pic.in.th/file/picinth/Charles-Chaplin-in-Modern-Times.webp"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">2. 'Modern Times' (1936)</h5>
+            <p class="card-text">
+              Charlie Chaplin was not necessarily known as a romance actor, but
+              there are a few of his films that do fall into that genre. Modern
+              Times is one of those. In a film that involves a half dozen
+              arrests and escapes and other wacky hijinks, there is a
+              beautifully innocent romance interspersed within.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="movie3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pic.in.th/file/picinth/The-Tramp-Charlie-Chaplin-and-the-blind-girl-Virginia-Cherrill-in-City-Lights.webp"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">3. 'City Lights' (1931)</h5>
+            <p class="card-text">
+              In the era of silent films, ideas and themes are conveyed through
+              action, not speech. So, for the romance to come through in this
+              film, there had to be a great deal of body language used to convey
+              the love and appreciation that “talkies” could do with words.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="movie4">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pic.in.th/file/picinth/your-name-featured.webp"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">4. 'Your Name' (2016)</h5>
+            <p class="card-text">
+              In Your Name, viewers see the two main characters, a high school
+              boy and girl, as they repeatedly swap bodies throughout the
+              gorgeous romantic animated film and learn to live each other's
+              lives. This beautiful confusion ultimately leads to their perfect
+              union in the end.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="movie5">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pic.in.th/file/picinth/Eternal-Sunshine-of-the-Spotless-Mind.webp"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              5. 'Eternal Sunshine of the Spotless Mind' (2004)
+            </h5>
+            <p class="card-text">
+              Eternal Sunshine of the Spotless Mind is a beloved classic that
+              demonstrates the lengths people will go to find the love of their
+              life. The leads in this film played expertly by Jim Carrey and
+              Kate Winslet, it is an emotional rollercoaster as we watch the ups
+              and downs of their love as it blossoms, fades, and is reignited in
+              the most fascinating ways.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="movie6">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pic.in.th/file/picinth/Singin-in-the-Rain.webp"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">6. 'Singin' in the Rain' (1952)</h5>
+            <p class="card-text">
+              Set in Hollywood during the 1920s, Singin' in the Rain tells the
+              story of Don Lockwood (Gene Kelly), who finds himself (alongside
+              his co-stars) having a challenging time transitioning to "talkies"
+              after the end of the silent film era. Along the way, he falls in
+              love with the aspiring actor Kathy Selden (Debbie Reynolds), whose
+              road to stardom comes at the perfect time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="movie7">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="https://cdn.pic.in.th/file/picinth/amelie-holding-a-spoon.webp"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">7. 'Amélie' (2001)</h5>
+            <p class="card-text">
+              In such a beautiful display of lights and colors, Amélie broke
+              into fans' hearts in 2001 and made such a lasting impression,
+              quickly becoming one of the best romantic movies around the globe.
+              The film follows the titular character, who has love and zeal for
+              life as she strives to bring joy and happiness to all those around
+              her.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
