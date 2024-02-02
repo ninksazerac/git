@@ -1,0 +1,22 @@
+@model FormResult
+@{
+    ViewData["Title"] = "Result";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Result</title>
+</head>
+<body>
+    <ul>
+    <h1>Form Submission Result:</h1>
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.LastName</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Eiffel Tower Height:</strong> @Model.Tall</p>
+    <p><strong>Message:</strong> @Model.Message</p>
+     @* <button type="button" onclick="window.history.back()">Back</button> *@
+    </ul>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="maincontainer"></div>
+    <script>
+      let mainContainer = document.getElementById("maincontainer");
+
+      //head
+      let head = document.createElement("h2");
+      head.textContent = "Exercise 04: JavaScript&DOM";
+      mainContainer.appendChild(head);
+
+      //button date time
+      let buttonDatetime = document.createElement("button");
+      buttonDatetime.textContent = "Click me to display Date and Time";
+      buttonDatetime.style.marginBottom = "20px";
+      mainContainer.appendChild(buttonDatetime);
+
+      //date time display
+      let dateTimeDisplay = document.createElement("div");
+      dateTimeDisplay.style.display = "none"; // Hide by default
+      dateTimeDisplay.style.position = "fixed";
+      dateTimeDisplay.style.width = "fit-content";
+      dateTimeDisplay.style.right = "0";
+      dateTimeDisplay.style.top = "0";
+      dateTimeDisplay.style.backgroundColor = "orange";
+      dateTimeDisplay.style.color = "white";
+      dateTimeDisplay.style.fontSize = "20px";
+      dateTimeDisplay.style.border = "1px solid black";
+      mainContainer.appendChild(dateTimeDisplay);
+
+      //web worker
+      const worker = new Worker("worker.js");
+
+      let isRunning = false; // Flag to check if the web worker is running
+
+      //condition clicked button date time
+      buttonDatetime.addEventListener("click", function () {
+        if (isRunning) {
+          worker.postMessage("stop");
+          buttonDatetime.textContent = "Click me to display Date and Time";
+          dateTimeDisplay.style.display = "none";
+        } else {
+          worker.postMessage("start");
+          buttonDatetime.style.display = "none";
+          dateTimeDisplay.style.display = "block";
+        }
+        isRunning = !isRunning; //check
+      });
+
+      // handle from the web worker
+      worker.onmessage = (event) => {
+        const data = event.data;
+        dateTimeDisplay.textContent = data.dateTime;
+        dateTimeDisplay.style.backgroundColor = data.bgColor;
+      };
+      //condition date time display can play and stop
+      dateTimeDisplay.addEventListener("click", function () {
+        if (isRunning) {
+          worker.postMessage("stop");
+          dateTimeDisplay.style.position = "relative";
+          dateTimeDisplay.style.marginBottom = "15px";
+        } else {
+          worker.postMessage("start");
+          dateTimeDisplay.style.position = "fixed";
+        }
+        isRunning = !isRunning;
+      });
+
+      //personal info
+      let personalBlock = document.createElement("div");
+      personalBlock.style.position = "block";
+      let personal = document.createElement("a");
+      personal.textContent = "Personal Info";
+      personal.style.color = "pink";
+      personal.href = "#";
+      personalBlock.appendChild(personal);
+      mainContainer.appendChild(personalBlock);
+
+      //personal info show data
+      let personalList = document.createElement("ul");
+      personalList.hidden = true;
+      let name = document.createElement("li");
+      let subject = document.createElement("li");
+      let semester = document.createElement("li");
+      name.textContent = "Name: Phanchita Teraphatanaroj, ID: 63010665";
+      subject.textContent = "Subject: Software Studio";
+      semester.textContent = "Semester: 1/2566";
+      personalList.append(name);
+      personalList.append(subject);
+      personalList.append(semester);
+      mainContainer.appendChild(personalList);
+
+      //handle personal info
+      personal.addEventListener("mouseout", function () {
+        personal.style.color = "pink";
+        personal.style.backgroundColor = "";
+      });
+      personal.addEventListener("mouseover", function () {
+        personal.style.color = "blue";
+        personal.style.backgroundColor = "yellow";
+      });
+      personal.addEventListener("click", function () {
+        personalList.hidden = !personalList.hidden;
+      });
+
+      //snapshots header
+      let snapShots = document.createElement("h1");
+      snapShots.textContent = "Snapshots";
+      mainContainer.appendChild(snapShots);
+
+      //snapstores data
+      let snapStores = [
+        [
+          "Fireworks",
+          "https://images.immediate.co.uk/production/volatile/sites/4/2018/07/GettyImages-609942456use-94e3841.jpg",
+        ],
+        [
+          "Crest",
+          "https://cdn.pic.in.th/file/picinth/label-premium-product-high-quality-vector-27352285326aea83e9ea2855.jpeg",
+        ],
+        [
+          "Action",
+          "https://i.pinimg.com/736x/15/e5/48/15e548b5cccc623ea4760723196fce88--action-poses-drawing-poses.jpg",
+        ],
+        [
+          "Buffalo",
+          "https://static.bangkokpost.com/media/content/20181128/c1_1583978_700.jpg",
+        ],
+      ];
+
+      //snapstores link click
+      let snapLists = document.createElement("ul");
+      let footer = document.createElement("img");
+      footer.src =
+        "https://cdn.pic.in.th/file/picinth/73495280_2679377905456811_6600803523460333568_n.jpeg";
+      footer.style.width = "600px";
+      snapStores.forEach((arr) => {
+        let snapList = document.createElement("li");
+        snapLists.appendChild(snapList);
+
+        let snapLink = document.createElement("a");
+        snapLink.innerHTML = arr[0];
+        snapLink.href = "#";
+        snapLink.onclick = () => {
+          footer.src = arr[1];
+        };
+        snapList.appendChild(snapLink);
+      });
+
+      mainContainer.appendChild(snapLists);
+      mainContainer.appendChild(footer);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+.btn-count {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 2px 5px 2px 5px;
+}
+.food {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: dimgray;
+}
+.food h1 {
+  color: gold;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 350px;
+  padding: 10px 20px 10px 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+  background-color: antiquewhite;
+}
+.card-top {
+  display: flex;
+  flex-direction: row;
+}
+img {
+  width: 300px;
+}
+.card-bottom {
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+  margin: 20px 0 0 0;
+  /* justify-content: space-between; */
+}
+.box-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  margin: 0 5px 0 5px;
+  /* width: 80px; */
+  height: 50px;
+  font-size: 30px;
+  border: 3px solid black;
+  border-radius: 10px;
+  color: blueviolet;
+  background-color: chartreuse;
+}
